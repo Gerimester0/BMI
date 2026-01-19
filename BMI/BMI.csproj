@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="BMI.txt" />
+    <Compile Update="diak.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BMI.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
