@@ -55,6 +55,23 @@ namespace BMI
       
             Console.WriteLine($"5. b feladat: egészséges diákok száma: {atlagsuly} darab");
 
+
+            bool van = false;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Név == "Tóth Éva")
+                {
+                    van = true;
+                    break;
+                }
+            }
+            Console.WriteLine($"5.c feladat: "+"Van Tóth Éva? ");
+            if (van == true)
+                Console.WriteLine("Van Tóth Éva");
+
+            else { Console.WriteLine("Nincs Tóth Éva"); }
+
         }
     }
 }
