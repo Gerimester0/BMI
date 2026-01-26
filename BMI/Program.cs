@@ -42,7 +42,18 @@ namespace BMI
                 atlag += diak.Testsúly;
             }
             atlag /= list.Count;
-            Console.WriteLine($"5. a feladat átlagos testsúly:"+ $"{atlag:F1} kg");
+            Console.WriteLine($"5. a feladat: átlagos testsúly:"+ $"{atlag:F1} kg");
+
+            int atlagsuly = 0;
+            foreach (var d in list)
+            {
+                if (d.BMI() == "Normal")
+                {
+                    atlagsuly++;
+                }
+            }
+      
+            Console.WriteLine($"5. b feladat: egészséges diákok száma: {atlagsuly} darab");
 
         }
     }
