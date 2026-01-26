@@ -66,11 +66,25 @@ namespace BMI
                     break;
                 }
             }
-            Console.WriteLine($"5.c feladat: "+"Van Tóth Éva? ");
-            if (van == true)
+            Console.WriteLine($"5. c feladat: "+"Van Tóth Éva? ");
+            if (van)
                 Console.WriteLine("Van Tóth Éva");
 
             else { Console.WriteLine("Nincs Tóth Éva"); }
+
+
+            string fajlba = "Név; BMI/n";
+            foreach (var d in list)
+            {
+            double magassagm = d.Magasság / 100.0;
+            double bmi = d.Testsúly / (magassagm*magassagm);
+
+                fajlba += $"{d.Név};{bmi:F1} /n";
+            }
+            File.WriteAllText("egeszseges_diakok.txt", fajlba);
+
+
+
 
         }
     }
